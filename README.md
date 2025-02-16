@@ -8,7 +8,7 @@ Since it is designed more specifically for andriod applications, Pixelearn is us
 # How Pixelearn is used
 > Beginning
 
-The user starts with opening the app and then the main menu screen is what they would see first. In the menu are included the topics/techniques the user can choose from depending on what it is they want to learn or get better at.
+The user starts with opening the app and the main menu is what they would see first. In the menu are included the topics/techniques the user can choose from depending on what it is they want to learn or get better at.
 
 # How it works
 
