@@ -11,6 +11,7 @@ Since it is designed more specifically for andriod applications, Pixelearn is us
 # How Pixelearn is used:
 
 The user starts with opening the app and the main menu is what they would see first. Included in the main menu, is the set of topics/techniques the user can choose from, depending on what it is they want to learn or get better at. 
+<img width="281" alt="pixelearnmainmenu" src="https://github.com/user-attachments/assets/e3db22c2-45fa-437b-9963-5f5637d30c06" />
 
 Then, the user would be taken to another set, which includes the lessons specifically for that topic. The user would then click on the lessons.
 
