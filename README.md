@@ -8,7 +8,7 @@ Since it is designed more specifically for andriod applications, Pixelearn is us
 # How Pixelearn is used
 > Starting(?):
 
-The user starts with opening the app and the main menu is what they would see first. In the main menu is included the set of topics/techniques the user can choose from, depending on what it is they want to learn or get better at. Then, the user would be taken to another set, which includes all the lessons specifically for that topic, which is followed by an in depth video tutorial on how to use and navigate the tool, as well as on how to apply it to artwork.
+The user starts with opening the app and the main menu is what they would see first. In the main menu is included the set of topics/techniques the user can choose from, depending on what it is they want to learn or get better at. Then, the user would be taken to another set, which includes all the lessons specifically for that topic, which is followed by an in depth video tutorial on how to use and navigate the tool, as well as on how to apply it to artwork. Along with a video is a trancript included for the user's preference in case they miss something, which can be identified easily, instead of having to pause the video and replay. Also along with the video is a sandbox for the user to use and follow with the video, either while the video is playing, or while it is paused.
 
 # How it works
 
