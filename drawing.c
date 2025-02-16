@@ -7,18 +7,7 @@
 #include "raylib.h"
 #include "raymath.h"
 
-/*
-
-P - PEN
-E - ERASER
-U - undo
-C - CIRCLE
-S - SQUARE 
-O - COLOR
-
-*/
-
-//compile:  gcc drawing.c raylib.dll -o draw -opengl32 -lgdi32 -lwinmm
+//compile:  gcc drawing.c raylib.dll -o draw -opengl32 -lgdi32 -lwinmm //////// ./pengl32.exe
 
 int main(void)
 {
@@ -27,8 +16,8 @@ int main(void)
     double penSize = 20;
     char lastLetter;
     int lastColor;
-    //char 'P' = 'P';
     Color chosenColor = BLACK;
+    bool colorMenuActive;
 
     Image pen = LoadImage("penTool.png");
     Image eraser = LoadImage("eraserTool.png");
@@ -91,6 +80,7 @@ int main(void)
         else if (CheckCollisionPointRec(GetMousePosition(), texRectundo) && IsMouseButtonPressed(MOUSE_BUTTON_LEFT))
         {
             lastLetter = 'O';
+            colorMenuActive = true;
         }
         else if (CheckCollisionPointRec(GetMousePosition(), texRectcirclepen) && IsMouseButtonPressed(MOUSE_BUTTON_LEFT))
         {
@@ -131,49 +121,45 @@ int main(void)
             EndTextureMode();
         }
 
-        printf("%f %f : %d %d \n", colorRed.x, colorRed.y, GetMouseX(), GetMouseY());
-        
-        if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT) && CheckCollisionPointRec(GetMousePosition(), colorRed) && lastLetter == 'O')
+        if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT) && CheckCollisionPointRec(GetMousePosition(), colorRed))
         {
             chosenColor = RED;
-            //lastLetter = 'P';
             printf("red");
         }
-        else if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT) && CheckCollisionPointRec(GetMousePosition(), colorOrange) && lastLetter == 'O')
+        else if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT) && CheckCollisionPointRec(GetMousePosition(), colorOrange))
         {
             chosenColor = ORANGE;
-            //lastLetter = 'P';
             printf("orange");
         }
-        else if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT) && CheckCollisionPointRec(GetMousePosition(), colorYellow) && lastLetter == 'O')
+        else if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT) && CheckCollisionPointRec(GetMousePosition(), colorYellow))
         {
             chosenColor = YELLOW;
-            //lastLetter = 'P';
             printf("yellow");
         }
-        else if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT) && CheckCollisionPointRec(GetMousePosition(), colorGreen) && lastLetter == 'O')
+        else if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT) && CheckCollisionPointRec(GetMousePosition(), colorGreen))
         {
             chosenColor = GREEN;
-            //lastLetter = 'P';
             printf("green");
         }
-        else if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT) && CheckCollisionPointRec(GetMousePosition(), colorBlue) && lastLetter == 'O')
+        else if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT) && CheckCollisionPointRec(GetMousePosition(), colorBlue))
         {
             chosenColor = BLUE;
-            //lastLetter = 'P';
             printf("blue");
         }
-        else if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT) && CheckCollisionPointRec(GetMousePosition(), colorPurple) && lastLetter == 'O')
+        else if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT) && CheckCollisionPointRec(GetMousePosition(), colorPurple))
         {
             chosenColor = PURPLE;
-            //lastLetter = 'P';
             printf("purple");
         }
-        else if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT) && CheckCollisionPointRec(GetMousePosition(), colorBlack) && lastLetter == 'O')
+        else if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT) && CheckCollisionPointRec(GetMousePosition(), colorBlack))
         {
             chosenColor = BLACK;
-            //lastLetter = 'P';
             printf("black");
+        }
+
+        if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT) && !CheckCollisionPointRec(GetMousePosition(), menuBar))
+        {
+            colorMenuActive = false;
         }
 
         if (IsMouseButtonReleased(MOUSE_BUTTON_LEFT))
@@ -181,7 +167,7 @@ int main(void)
             penSize = 100 * ((scroll.x - scrollBar.x) / scrollBar.width);
         }
 
-        if (lastLetter == 'O')
+        if (lastLetter == 'O' && colorMenuActive == true)
         {
             BeginTextureMode(canvas);
             DrawRectangleRec(menuBar, GRAY);
