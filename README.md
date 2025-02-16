@@ -1,6 +1,7 @@
 # 🌟 Pixelearn
 Pixelearn is an art based learning app for android applications. It has a series of lessons for categories such as brushes, colors, layers, clipping and alpha lock, selection and masks, and blending mode, as well as settings which allow the user to adjust them to however they see fit. Each module will include general lessons which include videos and an interactive sandbox. It will also test the users knowledge with quizzes.
 
+<img width="300" alt="pixelearnlogo" src="https://github.com/user-attachments/assets/fda22b6f-5638-4919-9172-c5136ef3d182" />
 
 
 
