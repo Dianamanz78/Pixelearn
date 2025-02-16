@@ -15,6 +15,8 @@ Each lesson inlcudes an in-depth video tutorial on how to use and navigate the t
 
 Once the user feels confident enough to move on, they will be prompted to take a quiz, based on accuracy through a tracing tool. For the quiz, the user will trace over what they are prompted to (in a sandbox), which would be something in relation to the video, and they will then be graded on how accurately they were able to trace over it. After that, the user is able to move onto the next topics and techniques, which the process repeats for all the topics as well as for the quizzess going forward.
 
-
 # How Pixelearn works
+
+The featured program includes a demo of the sandbox for the Basic of Brushes video lesson. The engine Raylib is utilized to create a simple canvas, brush size scaler, and color palette. First, the user should pick a color by tapping on the color palette and choosing a color. If the palette does not promptly disappear, the user can simply click outside of the palette. Next, the user should choose between the brush tool and the eraser tool. Finally, it is important that the user chooses a shape, either the square or the circle, before drawing.
+
 
