@@ -3,6 +3,7 @@ Pixelearn is an art based learning app for android applications. It has a series
 ![app icon](http://url/to/img.png)
 
 # Who Uses Pixelearn
+Since Pixelearn is designed more specifically for andriod applications, it is for people who use andriod devices and want to commit to learning how to create digital art, given the fact that it is rare to see digital art based learning/tutorial apps, specifcally for andriod, for people to use. Pixelearn is also beginner friendly, which uses videos that show the step by step process of art, as well as step by step processes on how to use the materials provided like brushes, layers, etc.
 
 # How it works
 Pixelearn is 
