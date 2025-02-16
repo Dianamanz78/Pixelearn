@@ -37,6 +37,12 @@ int main(void)
     Image test = LoadImage("colorTool.png");
     Image returnt = LoadImage("returnTool.png");
 
+    Rectangle menuBar = {(screenWidth / 2) - 350, screenHeight - 75, 700, 75};
+    Rectangle scrollBar = {(screenWidth / 2) - 350, screenHeight - 120, 700, 20};
+    Rectangle scroll = {(screenWidth / 2) - 355, screenHeight - 125, 20, 30};
+
+    InitWindow(screenWidth, screenHeight, "PIXELEARN");
+
     Rectangle colorRed = {82, screenHeight - 68, 64, 64};
     Rectangle colorOrange = {156, screenHeight - 68, 64, 64};
     Rectangle colorYellow = {230, screenHeight - 68, 64, 64};
@@ -44,12 +50,6 @@ int main(void)
     Rectangle colorBlue = {378, screenHeight - 68, 64, 64};
     Rectangle colorPurple = {452, screenHeight - 68, 64, 64};
     Rectangle colorBlack = {526, screenHeight - 68, 64, 64};
-
-    Rectangle menuBar = {(screenWidth / 2) - 350, screenHeight - 75, 700, 75};
-    Rectangle scrollBar = {(screenWidth / 2) - 350, screenHeight - 120, 700, 20};
-    Rectangle scroll = {(screenWidth / 2) - 355, screenHeight - 125, 20, 30};
-
-    InitWindow(screenWidth, screenHeight, "PIXELEARN");
 
     Texture2D penTex = LoadTextureFromImage(pen);
     Texture2D eraserTex = LoadTextureFromImage(eraser);
@@ -130,47 +130,49 @@ int main(void)
             }
             EndTextureMode();
         }
+
+        printf("%f %f : %d %d \n", colorRed.x, colorRed.y, GetMouseX(), GetMouseY());
         
         if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT) && CheckCollisionPointRec(GetMousePosition(), colorRed) && lastLetter == 'O')
         {
             chosenColor = RED;
-            lastLetter = 'P';
+            //lastLetter = 'P';
             printf("red");
         }
         else if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT) && CheckCollisionPointRec(GetMousePosition(), colorOrange) && lastLetter == 'O')
         {
             chosenColor = ORANGE;
-            lastLetter = 'P';
+            //lastLetter = 'P';
             printf("orange");
         }
         else if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT) && CheckCollisionPointRec(GetMousePosition(), colorYellow) && lastLetter == 'O')
         {
             chosenColor = YELLOW;
-            lastLetter = 'P';
+            //lastLetter = 'P';
             printf("yellow");
         }
         else if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT) && CheckCollisionPointRec(GetMousePosition(), colorGreen) && lastLetter == 'O')
         {
             chosenColor = GREEN;
-            lastLetter = 'P';
+            //lastLetter = 'P';
             printf("green");
         }
         else if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT) && CheckCollisionPointRec(GetMousePosition(), colorBlue) && lastLetter == 'O')
         {
             chosenColor = BLUE;
-            lastLetter = 'P';
+            //lastLetter = 'P';
             printf("blue");
         }
         else if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT) && CheckCollisionPointRec(GetMousePosition(), colorPurple) && lastLetter == 'O')
         {
             chosenColor = PURPLE;
-            lastLetter = 'P';
+            //lastLetter = 'P';
             printf("purple");
         }
         else if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT) && CheckCollisionPointRec(GetMousePosition(), colorBlack) && lastLetter == 'O')
         {
             chosenColor = BLACK;
-            lastLetter = 'P';
+            //lastLetter = 'P';
             printf("black");
         }
 
